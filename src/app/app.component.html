@@ -8,6 +8,7 @@
       <th>first name</th>
       <th>email</th>
       <th>password</th>
+      <th>Actions <button (click)= "addCustomer()">add</button></th>
     </tr>
     <tr *ngFor="let customer of customers">
       <td>{{ customer.id }}</td>
@@ -15,6 +16,7 @@
       <td>{{ customer.firstName }}</td>
       <td>{{ customer.email }}</td>
       <td>{{ customer.password }}</td>
+      <td><button (click)="deleteCustomer(customer)">Delete</button>><button (click)= "updateCustomer(customer)">update</button></td>
     </tr>
   </table>
 </ng-container>
